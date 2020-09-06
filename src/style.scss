@@ -1,0 +1,68 @@
+@import './variable.scss';
+@import './themes.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'gilroy-light';
+  src: url("./WebFonts/gilroy_light_macroman/gilroy-light-webfont.woff2") format('woff2'),
+       url("./WebFonts/gilroy_light_macroman/gilroy-light-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: url('./WebFonts/gilroy_extrabold_macroman/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('./WebFonts/gilroy_extrabold_macroman/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 1440px;
+  margin:auto;
+  font-size: map-get($mv-font-size, mv-font-md );
+  font-family: map-get($mv-font-family, mv-font-light );
+  font-weight: 600;
+}
+
+#siteCenter {
+  margin: 0 100px;
+}
+
+#logo {
+  @include flex-center;
+   h3 {
+    margin:0;
+    font-size:map-get($mv-font-size, mv-font-title1);
+    font-family:map-get($mv-font-family, mv-font-bold );
+  }
+}
+
+.menu {
+    display:flex;
+    justify-content: space-between;
+    #menu-selection {
+      @include flex-center;
+      font-size:map-get($mv-font-size, mv-font-sm);
+      color: map-get($mv-color, mv-gray)
+    }
+      #list span {
+      padding: 0 30px;
+    }
+}
+
+.btn {
+  border-radius:33px;
+  span {
+    @extend .btn;
+    position:relative;
+    @include padding(10px, 27px);
+    color: map-get($mv-color, mv-blue);
+    border: 2px solid map-get($mv-color, mv-blue);
+    font-weight: bold;
+  }
+}

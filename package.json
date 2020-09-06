@@ -1,0 +1,36 @@
+{
+  "name": "responsive-relationz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaBert89/RESPONSIVE-WEBSITE-RELATIONZ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucaBert89/RESPONSIVE-WEBSITE-RELATIONZ/issues"
+  },
+  "homepage": "https://github.com/LucaBert89/RESPONSIVE-WEBSITE-RELATIONZ#readme",
+  "devDependencies": {
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "mini-css-extract-plugin": "^0.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.3"
+  }
+}

@@ -1,0 +1,57 @@
+$background: (
+    bc-white:#fff,
+    bc-blue-btn: #1943EF,
+    bc-green-btn: #26C296
+);
+
+$color: (
+    c-black: #000,
+    c-white-btn: #fff,
+    c-text: #73738D,
+    c-blue: #1943EF
+);
+
+$font-size: (
+    font-mobile:8px,
+    font-sm:12px,
+    font-md: 17px,
+    font-logo-dt:24px,
+    font-logo-mobile:18px,
+    font-title-mobile:25px,
+    font-title-dt: 50px
+);
+
+$font-family: (
+    font-light: "gilroy-light",
+    font-bold:"gilroy-extrabold"
+);
+
+$padding-btns: (
+    padding-sm: 10px 27px
+);
+
+$width: (
+    width-md: 50%,
+    width-mdl: 65%,
+    width-center:80%,
+    width-lg:100%
+);
+
+@mixin flex-center-vert {
+    display:flex;
+    align-items:center;
+};
+
+@mixin flex-center-hori {
+    display:flex;
+    justify-content:center;
+};
+
+@mixin list-items {
+    display:flex;
+    list-style: none;
+    padding:0;
+};
+
+$radius-btn: 33px;
+

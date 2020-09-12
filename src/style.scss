@@ -1,6 +1,5 @@
 @import './variable.scss';
-@import './themes.scss';
-
+@import './breakpoints.scss';
 * {
   box-sizing: border-box;
 }
@@ -24,45 +23,261 @@
 body {
   max-width: 1440px;
   margin:auto;
-  font-size: map-get($mv-font-size, mv-font-md );
-  font-family: map-get($mv-font-family, mv-font-light );
+  font-size: map-get($font-size, font-md );
+  font-family: map-get($font-family, font-light );
   font-weight: 600;
 }
 
-#siteCenter {
-  margin: 0 100px;
+.siteCenter {
+  width:map-get($width, width-center );
+  margin:auto;
 }
 
+// header section
 #logo {
-  @include flex-center;
+  @include flex-center-vert ;
    h3 {
     margin:0;
-    font-size:map-get($mv-font-size, mv-font-title1);
-    font-family:map-get($mv-font-family, mv-font-bold );
+    font-size:map-get($font-size, font-logo-mobile);
+    font-family:map-get($font-family, font-bold );
+    line-height:49px;
+    @include breakpoint("mobile") {
+      font-size:map-get($font-size, font-logo-dt);
+    }
   }
 }
+
+.svgCircle {
+  position:relative;
+  margin-left:50px;
+  height:100px;
+  width:10%;
+  @include breakpoint("tablet") {
+    margin-left:100px;
+}}
 
 .menu {
     display:flex;
     justify-content: space-between;
     #menu-selection {
-      @include flex-center;
-      font-size:map-get($mv-font-size, mv-font-sm);
-      color: map-get($mv-color, mv-gray)
+      @include flex-center-vert;
+      font-size:map-get($font-size, font-sm);
+      color: map-get($color, c-text);
+    } 
+    #list {
+      span {
+        display:none;
+     
+        @include breakpoint("small-dp") {
+          padding: 0px 10px;
+          cursor: pointer;
+          display:inline-flex;
+        }
+        @include breakpoint("desktop") {
+          padding: 0px 30px;
+        }
     }
-      #list span {
-      padding: 0 30px;
+    & :hover {
+      color: map-get($color, c-blue);
+    }
     }
 }
 
-.btn {
-  border-radius:33px;
+.headerBtn{
+  cursor: pointer;
   span {
-    @extend .btn;
-    position:relative;
-    @include padding(10px, 27px);
-    color: map-get($mv-color, mv-blue);
-    border: 2px solid map-get($mv-color, mv-blue);
-    font-weight: bold;
+    padding: 10px 12px;
+    border-radius:$radius-btn;
+    color: map-get($color, c-blue);
+    border: 2px solid map-get($color, c-blue);
+    font-weight: 600;
+    font-size:map-get($font-size, font-mobile);
+    @include breakpoint("tablet") {
+    padding: map-get($padding-btns, padding-sm);
+    }
+    @include breakpoint("mobile") {
+      font-size:map-get($font-size, font-sm);
+    }
   }
+  & :hover {
+    color: map-get($color, c-white-btn);
+    background:map-get($background, bc-blue-btn);
+  }
+};
+
+
+// header section and phoneimage section
+#presentationTitle {
+    display: block;
+  @include breakpoint("tablet") {
+    display:flex; 
+    flex-wrap:wrap;
+  }
+};
+
+
+#websitePresentation {
+    width: map-get($width, width-lg );
+    font-size:map-get($font-size, font-sm );
+  @include breakpoint("tablet") {
+    width: map-get($width, width-md );
+  }
+  #title h1 {
+    margin-bottom:20px;
+    margin-left:10px;
+    font-size:map-get($font-size, font-title-mobile );
+    font-family: map-get($font-family , font-bold );
+    line-height: 22px;
+    @include breakpoint("mobile") {
+      font-size:map-get($font-size, font-title-dt );
+      line-height: 49px;
+    }
+  }
+};
+
+#pointGroups {
+  transform:translate(-10px, 0);
+  width:30px;
+  @include breakpoint("tablet") {
+    width:70px;
+  }
+}
+
+.description {
+  font-size:map-get($font-size, font-sm );
+  color: map-get($color, c-text);
+  margin-top: 40px;
+  text-align:justify;
+  line-height:22px;
+  @include breakpoint("mobile") {
+    font-size:map-get($font-size, font-md );
+  }
+}
+
+#emailTry {
+  background-color: map-get($background, bc-white );
+  position:relative;
+  margin:30px 0;
+    input {
+      filter:drop-shadow(0px 2.77222px 27.7222px rgba(0, 0, 0, 0.100));
+      border-radius:$radius-btn;
+      height: 50px;
+      border:none;
+      width: map-get($width, width-lg );
+      padding-left:20px;
+      font-size:map-get($font-size, font-mobile );
+      @include breakpoint("mobile") {
+        font-size:map-get($font-size, font-sm );
+      }
+    }
+    & :focus {
+      outline:none;
+    }
+      .tryBtn {
+        cursor: pointer;
+        position:absolute;
+        border-radius:$radius-btn;
+        width: 100px;
+        height:100%;
+        right:0;
+        color:map-get($color, c-white-btn );
+        background-color:map-get($background, bc-blue-btn );
+        font-size:map-get($font-size, font-mobile );
+        @include breakpoint("mobile") {
+          width: 150px;
+          font-size:map-get($font-size, font-sm );
+        }
+      }
+        & :hover {
+          color: map-get($color, c-blue);
+          background:map-get($background, bc-white);
+        }
+}
+
+#checkedFeature {
+  @include list-items;
+  li {
+    padding: 0px 20px;
+    font-size:map-get($font-size, font-sm);
+    color:map-get($color, c-text );
+    @include breakpoint("mobile") {
+      font-size:map-get($font-size, font-md );
+    }
+    .fa-check {
+      padding:0 10px;
+    }
+  } 
+  & :first-child {
+    padding: 0px 20px 0 0;
+  }
+}
+
+#imagePhone {
+  overflow:hidden;  
+  display:flex;
+  justify-content: center;
+  width: map-get($width, width-lg );
+  margin-top:0;
+  height:600px;
+  @include breakpoint("tablet") {
+    width: map-get($width, width-md );
+    margin-top: 50px;
+    height:100%;
+    justify-content: flex-end;
+  }
+  #phone {
+    position:relative;
+  }
+  .phoneCircle {
+    position:relative;
+  }
+  .small {
+    top:80px;
+    z-index:-1;
+  }
+  .big {
+    bottom:100px;
+    left:180px;
+    z-index:-1;
+  }
+};
+
+.break {
+  display:none;
+  @include breakpoint("tablet") {
+    display:block;
+    height:100px;
+    position:relative;
+    top:100px;
+    right: 35%;
+  }
+}
+
+#options {
+   @include flex-center-hori;
+  ul{
+    @include list-items;
+    li {
+      margin:0px 10px;
+      padding:0px 10px 20px 10px;
+      border-bottom:2px solid #000;
+      color:map-get($color, c-text );
+      font-size:map-get($font-size, font-mobile);
+      &:first-child {
+        margin-left:0px;
+      }
+      &:last-child {
+        margin-right:0px;
+      }
+      @include breakpoint("mobile") {
+        font-size:map-get($font-size, font-sm);
+      }
+      @include breakpoint("tablet") {
+        font-size:map-get($font-size, font-md);
+        margin:0px 50px;
+        padding:0px 40px 30px 40px;
+      }
+    }
+  }
+ 
 }

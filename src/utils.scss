@@ -1,0 +1,11 @@
+.c-text {
+    color: map-get($color, c-text );
+}
+
+.icon {
+    border-radius: $radius-btn;
+  }
+
+.f-column {
+    @include flex-column;
+}

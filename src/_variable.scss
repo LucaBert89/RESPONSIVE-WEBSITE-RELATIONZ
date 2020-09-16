@@ -1,21 +1,26 @@
 $background: (
     bc-white:#fff,
     bc-blue-btn: #1943EF,
-    bc-green-btn: #26C296
+    bc-green-btn: #26C296,
+    bc-grey-icons:#E8ECFD,
+    bc-green-icons: #E9F9F4
 );
 
 $color: (
     c-black: #000,
     c-white-btn: #fff,
     c-text: #73738D,
-    c-blue: #1943EF
+    c-blue: #1943EF,
+    c-green-send:#26C296
 );
 
 $font-size: (
     font-mobile:8px,
     font-sm:12px,
+    font-mdd:14px,
     font-md: 17px,
     font-logo-dt:24px,
+    font-title-options: 30px,
     font-logo-mobile:18px,
     font-title-mobile:25px,
     font-title-dt: 50px
@@ -47,6 +52,11 @@ $width: (
     justify-content:center;
 };
 
+@mixin flex-column {
+    display:flex;
+    flex-direction: column;
+};
+
 @mixin list-items {
     display:flex;
     list-style: none;
@@ -54,4 +64,6 @@ $width: (
 };
 
 $radius-btn: 33px;
+
+$border-table:1px solid #E8ECFD;
 

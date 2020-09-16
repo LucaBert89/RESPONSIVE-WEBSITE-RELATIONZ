@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./dist/main.6a237af80d1f645883b5.css">
     <title>Relationz</title>
 </head>
 <body class="siteCenter">
@@ -26,7 +25,7 @@
                     <span>Pricing</span>
                     <span>Login</span>
                 </div>
-                <div class="btn headerBtn">
+                <div class="headerBtn">
                     <span>Try it for free</span>
                 </div>
             </div>
@@ -45,7 +44,7 @@
                 </div>
                 <form id="emailTry">
                     <input type="text" placeholder="Email id">
-                    <button class="tryBtn">
+                    <button class="btn tryBtn">
                         Try it for free
                     </button>
                 </form>
@@ -85,13 +84,337 @@
         <section id="siteFunctionality">
             <div id="options">
                 <ul>
-                    <li><i class="fas fa-bell"></i>Get Reminders</li>
-                    <li><i class="fas fa-sync-alt"></i>Sync Everything</li>
-                    <li><img src="./assets/images/Group.svg" alt=""></i>The multichannel</li>
+                    <li class="pointer"><i class="far fa-bell icon bcsmallIcons"></i>Get Reminders
+                    </li>
+                    <li class="pointer"><i class="fas fa-sync-alt icon bcsmallIcons"></i>Sync Everything</li>
+                    <li class="pointer"><img class="icon bcsmallIcons" src="./assets/images/Union.svg" alt="">The multichannel</li>
                 </ul>
             </div>
         </section>
-        
+        <section class="getReminders">
+            <div id="verticalMenu">
+                <div id="smallLogo">
+                    <h3>Relationz</h3>
+                </div>
+                <div id="relationzMenu">
+                    <div id="titleMenu">
+                        Main Menu
+                    </div>
+                    <ul id="listMenu">
+                        <li class="pointer"><i class="far fa-clock"></i>Overview</li>
+                        <li class="pointer"><i class="fas fa-suitcase"></i>Follow up</li>
+                        <li class="pointer"><i class="fas fa-folder"></i>Contacts</li>
+                        <li class="pointer"><i class="fas fa-file"></i>Value letter</li>
+                        <li class="pointer"><i class="fas fa-user-friends"></i>Groups</li>
+                        <li class="pointer"><i class="fas fa-envelope"></i>Messages</li>
+                        <li class="pointer"><i class="fas fa-map-marked-alt"></i>Reports</li>
+                    </ul>
+                    <div id="logOut">
+                        <div class="logbtn">
+                            Logout
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="relationz">
+                <div id="searchTask">
+                    <form action="">
+                        <input type="text" placeholder="Find classes, task and anything...">
+                        <button class="btn pointer" id="taskBtn">New Tasks</button>
+                    </form>
+                    <div id="setting">
+                        <div id="icons">
+                            <i class="fas fa-bell pointer"></i>
+                            <i class="fas fa-cog pointer"></i>
+                        </div>
+                        <div id="hour">
+                            <span>08:10 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="welcome">
+                        <div id="greeting">
+                            <div id="titleGreeting">Hi Rohan,</div>
+                            <span>Welcome to all new Relationz,we have updated just abour everything to help to stay in touch with people who matters to you the most</span>
+                            <img src="./assets/images/VectorRelationz.svg" alt="">
+                        </div>
+                        <div id="button">
+                            <div class="btn" id="btnStart">Get Started</div>
+                        </div>
+                    </div>
+                
+                    <div id="infoMeetings">
+                        <div class="infoBox">
+                            <div class="boxTitle">
+                                Upcoming Meetings
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <div class="tableTitles columnTitle">
+                                <div class="titleCell cells">Person</div>
+                                <div class="titleCell cells">Last met on</div>
+                                <div class="titleCell cells">Meeting date</div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/profilePerson.svg" alt="">
+                                    Archana
+                                </div>
+                                <div class="cells">
+                                    12 Dec 2019
+                                </div>
+                                <div class="cells">
+                                    27 Jan, 2020
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse.svg" alt="">
+                                    Surojit
+                                </div>
+                                <div class="cells">
+                                    1 Jan, 2020
+                                </div>
+                                <div class="cells">
+                                    28 Jan, 2020
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (1).svg" alt="">
+                                    Surbhi
+                                </div>
+                                <div class="cells">
+                                    19 Nov 2019
+                                </div>
+                                <div class="cells">
+                                    31 Jan, 2020
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (2).svg" alt="">
+                                    William
+                                </div>
+                                <div class="cells">
+                                    16 Jan, 2020
+                                </div>
+                                <div class="cells">
+                                    2 Feb, 2020
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infoBox">
+                            <div class="boxTitle">
+                                Recently Added
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <div class="tableTitles columnTitle">
+                                <div class="titleCell cells">Person</div>
+                                <div class="titleCell cells">Role</div>
+                                <div class="titleCell cells">Send Email</div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (3).svg" alt="">
+                                    Aditya  
+                                </div>
+                                <div class="cells">
+                                    UI Designer
+                                </div>
+                                <div class="cells">
+                                    <div class="send">
+                                        Send
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (4).svg" alt="">
+                                    Bhawna
+                                </div>
+                                <div class="cells">
+                                    Developer
+                                </div>
+                                <div class="cells">
+                                    <div class="sent">
+                                        Sent
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (5).svg" alt="">
+                                    Sukalp
+                                </div>
+                                <div class="cells">
+                                    Design Manager
+                                </div>
+                                <div class="cells">
+                                    <div class="send">
+                                        Send
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableTitles c-text">
+                                <div class="cells">
+                                    <img src="./assets/images/profiles/Ellipse (6).svg" alt="">
+                                    Jenna
+                                </div>
+                                <div class="cells">
+                                    Senior Developer
+                                </div>
+                                <div class="cells">
+                                    <div class="send">
+                                        Send
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="greenSvg">
+            <img src="./assets/images/Groupgreen.svg" alt="">
+        </div>
+        <section id="reminders" class="f-column">
+            <div id="bellContainer">
+                <i class="icon bcbigIcon far fa-bell"></i>
+            </div>
+            <div class="optionsContent">
+                <div class="chatContent">
+                    <div class="chat">
+                        <img src="./assets/images/optionsProfiles/Image.svg" alt="">
+                        You have a meeting with Surbhi to help her with her portfolio. She got a new pet (Dog named Tiger).
+                    </div>
+                    <div class="chat">
+                        <img src="./assets/images/optionsProfiles/Image (1).svg" alt="">
+                        Ripal has recently been to Thailand and she wants to discuss about new Job opportunity.
+                    </div>
+                    <div class="chat">
+                        <img src="./assets/images/optionsProfiles/Image (2).svg" alt="">
+                        You have a meeting with Surbhi to help her with her portfolio. She got a new pet (Dog named Tiger).
+                    </div>
+                </div>
+                <div class="descriptionContent">
+                    <h3>Get reminders to follow up</h3>
+                    <div class="descriptionText c-text">
+                        We remind you of everything important and track everything that’s important to your important ones so you always stay connected. We only tell you the details when you need them the most.
+                    </div>
+                    <div class="listOptions">
+                        <ul>
+                            <li><i class="fas fa-check"></i>Birthdays</li>
+                            <li><i class="fas fa-check"></i>Friends & Family</li>
+                        </ul>
+                        <ul>
+                            <li><i class="fas fa-check"></i>Business Meetings</li>
+                            <li><i class="fas fa-check"></i>Surroundings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sync">
+            <div id="synchronous">
+                <i class="icon bcbigIcon fas fa-sync"></i>
+            </div>
+            <div class="optionsContent">
+                <div class="descriptionContent">
+                    <h3>Our sync remembers everything</h3>
+                    <div class="descriptionText c-text">
+                        We build a huge databasse of all your contacts with all the possible details they share with you and you can access it anywhere, anytime. It’s works so well that you will love it like we do.
+                    </div>
+                    <div class="listOptions">
+                        <ul>
+                            <li><i class="fas fa-check"></i>Available</li>
+                            <li><i class="fas fa-check"></i>Seatch details</li>
+                        </ul>
+                        <ul>
+                            <li><i class="fas fa-check"></i>Can be accesed via phonebook</li>
+                            <li><i class="fas fa-check"></i>24X7 Support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chatContent">
+                    <div class="chat syncContainer">
+                        <div id="profileData">
+                            <img src="./assets/images/optionsProfiles/Image3.svg" alt="">
+                            <div id="personalData">
+                                <h3>Archana Deshmukh</h3>
+                                <span>Product Design Consultant</span>
+                            </div>
+                        </div>
+                        <div class="infochatBox c-text">
+                            <span>More information</span>
+                            <ul>
+                                <li><i class="fas fa-birthday-cake"></i>17 April, 1994</li>
+                                <li><i class="fas fa-suitcase"></i>Product Design Consultant</li>
+                                <li><i class="fas fa-check-circle"></i>Went to Amsterdam with parents to visit her brother</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="connection">
+            <div id="connectionContainer">
+                <img class="icon bcsmallIcons" src="./assets/images/Union.svg" alt="">
+            </div>
+            <div class="optionsContent">
+                <div class="chatContent">
+                    <div class="chat syncContainer connection">
+                        <div id="profileData">
+                            <div id="personalData">
+                                <h3>Send content around anxiety</h3>
+                                <span>3 people on the list</span>
+                            </div>
+                        </div>
+                        <div class="infochatBox">
+                            <span class="c-text">Sending to:</span>
+                            <ul class="textRow">
+                                <li><img src="./assets/images/optionsProfiles/smallpic (1).svg" alt="">Archana Kamath</li>
+                                <li><img src="./assets/images/optionsProfiles/smallpic (1).svg" alt="">Surojit Saraswat</li>
+                                <li><img src="./assets/images/optionsProfiles/smallpic (1).svg" alt="">Surbhi Gangwar</li>
+                            </ul>
+                        </div>
+                        <div id="messageChat" class="c-text">
+                            We all worry and get upset from time to time. It’s a normal part of life, right? But what happens when that anxiety or anger takes over, and you can’t calm down? Being able to calm yourself in the mome...
+                        </div>
+                        <div id="sendEmail">
+                            <div id="check">
+                                <input type="checkbox" name="send" checked>
+                                <label for="send">Send an Email as well</label>
+                            </div>
+                            <div id="btnSend">
+                                Send
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="descriptionContent">
+                    <h3>Stay connected in a few clicks</h3>
+                    <div class="descriptionText c-text">
+                        The multichannel sales engagement platform which automates personal email outreach, calls, and tasks, while Sales can focus on what really matters - closing
+                    </div>
+                    <div class="listOptions">
+                        <ul>
+                            <li><i class="fas fa-check"></i>The multichannel</li>
+                            <li><i class="fas fa-check"></i>The multichannels</li>
+                        </ul>
+                        <ul>
+                            <li><i class="fas fa-check"></i>The multichannel</li>
+                            <li><i class="fas fa-check"></i>The multichannel</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
    </main>
    <footer>
 

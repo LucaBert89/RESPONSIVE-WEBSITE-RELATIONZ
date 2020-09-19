@@ -42,10 +42,39 @@ $width: (
     width-lg:100%
 );
 
+@mixin blueBtn {
+    background-color:map-get($background, bc-blue-btn );
+    font-size: map-get($font-size, font-sm );
+      &:hover {
+        color: map-get($color, c-blue);
+        background:map-get($background, bc-white);
+      }
+      @include breakpoint("tablet") {
+        font-size: map-get($font-size, font-md );
+      }
+}
+
+@mixin greenBtn {
+    background-color:map-get($background, bc-green-btn );
+    font-size: map-get($font-size, font-sm );
+      &:hover {
+        color: map-get($color, c-green-send);
+        background:map-get($background, bc-white);
+      }
+      @include breakpoint("tablet") {
+        font-size: map-get($font-size, font-md );
+      }
+}
+
 @mixin flex-center-vert {
     display:flex;
     align-items:center;
 };
+
+@mixin paragraphTitles {
+    font-size: map-get($font-size, font-title-options );
+    font-family: map-get($font-family, font-bold );
+}
 
 @mixin flex-center-hori {
     display:flex;

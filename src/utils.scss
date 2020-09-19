@@ -1,3 +1,15 @@
+@import './breakpoints.scss';
+@import './variable.scss';
+
+.siteCenter {
+    width:map-get($width, width-center );
+    margin:auto;
+  }
+
+.pointer {
+    cursor:pointer;
+}
+
 .c-text {
     color: map-get($color, c-text );
 }
@@ -8,4 +20,20 @@
 
 .f-column {
     @include flex-column;
+}
+
+.pTitles {
+    @include paragraphTitles;
+    font-size: map-get($font-size, font-logo-mobile );
+    @include breakpoint("tablet") {
+        font-size: map-get($font-size, font-title-options);
+    }
+}
+
+.blueBtn {
+    @include blueBtn;
+}
+
+.greenBtn {
+    @include greenBtn;
 }

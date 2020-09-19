@@ -29,14 +29,6 @@ body {
   font-weight: 600;
 }
 
-.siteCenter {
-  width:map-get($width, width-center );
-  margin:auto;
-}
-
-.pointer {
-  cursor:pointer;
-}
 
 // header section
 #logo {
@@ -91,10 +83,16 @@ body {
 .btn {
   border-radius:$radius-btn;
   color:map-get($color, c-white-btn );
-  background-color:map-get($background, bc-blue-btn );
-  &:hover {
-    color: map-get($color, c-blue);
-    background:map-get($background, bc-white);
+  cursor: pointer;
+}
+
+.tryBtn {
+  width: 100px;
+  right:0;
+  font-size:map-get($font-size, font-mobile );
+  @include breakpoint("tablet") {
+    width: 150px;
+    font-size:map-get($font-size, font-sm );
   }
 }
 
@@ -186,21 +184,13 @@ body {
         height: 50px;
       }
     }
+    .tryBtn {
+      height:100%;
+      position:absolute;
+    }
     & :focus {
       outline:none;
     }
-      .tryBtn {
-        cursor: pointer;
-        position:absolute;
-        width: 100px;
-        height:100%;
-        right:0;
-        font-size:map-get($font-size, font-mobile );
-        @include breakpoint("tablet") {
-          width: 150px;
-          font-size:map-get($font-size, font-sm );
-        }
-      }
 }
 
 #checkedFeature {
@@ -335,9 +325,11 @@ body {
     background-color:map-get($background, bc-white );
     margin-left:30px;
     border-right:$border-table;
+    text-align:center;
   @include breakpoint("tablet") {
     @include flex-column;
     width: 15%;
+    text-align:left;
   }
 }
 
@@ -395,7 +387,7 @@ body {
     padding: 20px 0;
     @include breakpoint("tablet") {
       @include flex-center-vert;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     input {
       border-radius:$radius-btn;
@@ -414,14 +406,12 @@ body {
     }
     #taskBtn {
       padding:10px 20px;
-      font-size: map-get($font-size, font-sm );
-      @include breakpoint("tablet") {
-        font-size: map-get($font-size, font-md );
-      }
-
     }
     #setting {
-      @include flex-center-vert;
+      @include flex-center-hori;
+      @include breakpoint("tablet") {
+        @include flex-center-vert;
+      }
       #icons {
         margin-right:100px;
         color:map-get($color, c-text );
@@ -561,7 +551,7 @@ body {
       }
 }
 
-#greenSvg {
+.groupSvg {
   position:relative;
   bottom:40px;
   z-index:-1;
@@ -573,6 +563,9 @@ body {
      width:80px;
       }
   }
+  #orangePoints {
+    transform: translateX(-20px);
+  }
 }
 
 #bellContainer, #connectionContainer {
@@ -580,15 +573,16 @@ body {
 }
 
 #reminders, #sync,#connection {
+  margin-top:50px;
     .bcbigIcon, .bcsmallIcons {
       background-color:map-get($background, bc-green-icons );
       padding:20px;
       font-size: map-get($font-size, font-logo-dt);
-      color: map-get($color, c-green-send);
-      width:60px;
+      color: map-get($color, c-green-send)
     }
     .optionsContent {
       display:block;
+      
       @include breakpoint("tablet") {
         display:flex;
       }
@@ -598,10 +592,13 @@ body {
         margin-right:50px;
         display:flex;
         flex-direction: column;
-        
+        .connectSvg {
+          top:10%;
+        }
         @include breakpoint("tablet") {
           width:50%;
         }
+        
         .chat {
           background: map-get($background, bc-white );
           font-size: map-get($font-size, font-mobile );
@@ -617,6 +614,16 @@ body {
             padding-right:5px;
           }
         }
+        .chatSvg {
+          position:relative;
+          right:10%;
+          bottom:10%;
+          svg {
+            position:absolute;
+            overflow:visible;
+            z-index:-1;
+          }
+        }
         .syncContainer {
           flex-wrap:wrap;
           padding:20px 30px;
@@ -626,11 +633,12 @@ body {
           #profileData {
             display:flex;
             align-items: start;
+            
+            }
           }
           #personalData {
             h3 {
               margin:0;
-              font-family: map-get($font-family, font-bold );
             }
           }
           .infochatBox {
@@ -659,17 +667,47 @@ body {
           @include flex-center-vert;
           justify-content: space-between;
           width:100%;
-          check {
-            input[type="checkbox"] {
-              color:green;
-            }
+          #check {
+            @include flex-center-vert;
           }
-        }
+          input:checked ~ .checkmark {
+            background-color: #fff;
+            &:after {
+              opacity:1;
+            }
+            }
+            .checkmark {
+              cursor:pointer;
+              margin-right:20px;
+              display:block;
+              width:20px;
+              height:20px;
+              border:1px solid map-get($background, bc-green-btn);
+              background-color: map-get($background, bc-grey-icons);
+              position:relative;
+              transition: background-color 0.4s;
+              &:after {
+                content:"";
+                position:absolute;
+                width:5px;
+                height:10px;
+                border-right:2px solid map-get($background, bc-green-btn);
+                border-bottom:2px solid map-get($background, bc-green-btn);
+                top:40%;
+                left:50%;
+                transform:translate(-50%, -50%) rotateZ(40deg);
+                opacity:0;
+              }
+            }
+              }
+             }
+             }
         #btnSend {
           background-color: map-get($background, bc-green-btn);
           padding:10px 20px;
           color:#fff;
           border-radius:$radius-btn;
+          cursor:pointer;
         }
         .textRow {
           display:flex;
@@ -678,20 +716,12 @@ body {
               padding-right:20px;
             }
         }
-      }
       .descriptionContent {
         width:100%;
         display:flex;
         flex-direction:column;
         @include breakpoint("tablet") {
           width:50%;
-        }
-        h3 {
-          font-family:"gilroy-extrabold";
-          font-size: map-get($font-size, font-logo-mobile );
-          @include breakpoint("tablet") {
-            font-size: map-get($font-size, font-title-options);
-          }
         }
         .descriptionText {
           font-size: map-get($font-size, font-sm );
@@ -717,7 +747,188 @@ body {
           }
         }
       }
+
+#customersOpinion {
+  #opinionContainer {
+    margin-top:100px;
+    display:flex;
+  }
+  .svgProfiles {
+    width:30%;
+    margin-top:50px;
+    flex-direction:column;
+    .customerSvg {
+      display:none;
+      position:relative; 
+      @include breakpoint("small-dp") {
+        display:flex;
+      }
+      svg {
+        position:absolute;
+      }
+    }
+    .thirdleftImage {
+      top:50%;
+    }
+    #secondrightImage {
+      top:20%;
+    }
+    #thirdrightImage {
+      top:70%;
+    }
+  }
+  #opinion {
+    @include flex-center-hori;
+    flex-direction: column;
+    align-items:center;
+    #titleSection {
+      @include flex-center-hori;
+      padding-bottom:60px;
+    }
+    #containerOpinion {
+      width:100%;
+      background-color: map-get($background, bc-white );
+      filter:drop-shadow(0px 2.77222px 27.7222px rgba(0, 0, 0, 0.100));
+      #opinionProfile {
+        text-align:center;
+          transform:translateY(-15%);
+          #quote {
+            img {
+              width:20px;
+            }
+          }
+          #customerName {
+            padding-bottom:20px;
+            font-size:map-get($font-size, font-sm);
+            @include breakpoint("tablet") {
+              font-size:map-get($font-size, font-md);
+            }
+          }
+          #textOpinion {
+            padding: 20px 40px;
+            font-size:map-get($font-size, font-sm);
+            @include breakpoint("tablet") {
+              font-size:map-get($font-size, font-md);
+            }
+          }
+          #signature {
+            img {
+              width:100px;
+            }
+          }
+      }
+    }
+  }
+}
+
+.slideMaster {
+  @include flex-center-hori;
+  .bcMaster{
+    background-color: map-get($background, bc-grey-icons);
+    cursor: pointer;
+    &:hover {
+      background-color:map-get($background, bc-green-btn);
+    }
+  }
+  .dot {
+    margin:0 10px;
+    padding:5px;
+    border-radius:50%;  
+  }
+  .dash {
+    padding:5px 15px;
+    border-radius:22px;
+  }
+}
+
+#betterRelationship{
+  margin-top:100px;
+  #blueCircle {
+    position:relative;
+    right:40px;
+    bottom:20px;
+    svg {
+      position:absolute;
+    }
+  }
+  #container {
+    @include flex-center-vert;
+    flex-direction: column;
+    position:relative;
+    background-color: map-get($background, bc-white );
+    padding:40px 50px;
+    filter:drop-shadow(0px 2.77222px 27.7222px rgba(0, 0, 0, 0.100));
+    @include breakpoint("tablet") {
+      display:flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  #title {
+    h3{
+      margin:0;
+    }
+    span {
+      font-size: map-get($font-size, font-sm );
+    }
+  }
+  .btn {
+    margin-top:20px;
+    @include flex-center-hori;
+    @include flex-center-vert;
+    border:1px solid #000;
+    height:50px;
+    @include breakpoint("tablet") {
+      margin-top:0px;
     }
   }
 
+  }
+}
 
+#footerContainer {
+  display:flex;
+  margin-top:100px;
+  flex-wrap:wrap;
+  text-align:center;
+  .footerColumn {
+    width:50%;
+    @include breakpoint("tablet") {
+      width:25%;
+    }
+    ul {
+      list-style: none;
+      padding:0;
+      li {
+        font-size: map-get($font-size, font-mobile);
+        padding:5px 0;
+        margin:0;
+        @include breakpoint("tablet") {
+          font-size: map-get($font-size, font-sm );
+        }
+      }
+    }
+  }
+}
+
+.titleColumn {
+  font-family: map-get($font-family, font-bold );
+  font-size: map-get($font-size, font-sm );
+  @include breakpoint("tablet") {
+    font-size: map-get($font-size, font-md );
+  }
+}
+
+#copyright {
+  margin:50px 0;
+  text-align:center;
+  .titleColumn {
+    padding-bottom:20px;
+  
+  }
+  span {
+    font-size:map-get($font-size, font-mobile );
+    @include breakpoint("tablet") {
+      font-size:map-get($font-size, font-sm );
+    }
+  }
+}

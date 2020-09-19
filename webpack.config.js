@@ -9,7 +9,7 @@ module.exports = {
         template: path.resolve(__dirname, "index.html")
       }),
       new MiniCssExtractPlugin({
-        filename: "[name].[contentHash].css"
+        filename: "style.css"
       })],
      module: {
           rules: [

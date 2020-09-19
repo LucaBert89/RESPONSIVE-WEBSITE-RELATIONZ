@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
     <title>Relationz</title>
 </head>
-<body class="siteCenter">
-   <header id="header-menu">
+<body>
+   <header id="header-menu" class="siteCenter">
         <div class="menu">
             <div id="logo">
                 <h3>Relationz</h3>
@@ -32,7 +33,7 @@
         </div>
    </header>
    <main>
-        <section id="presentationTitle">
+        <section id="presentationTitle" class="siteCenter">
             <div id="websitePresentation">
                 <div id="title">
                     <h1>Take your relationship to the next level</h1>
@@ -44,7 +45,7 @@
                 </div>
                 <form id="emailTry">
                     <input type="text" placeholder="Email id">
-                    <button class="btn tryBtn">
+                    <button class="btn tryBtn blueBtn">
                         Try it for free
                     </button>
                 </form>
@@ -81,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section id="siteFunctionality">
+        <section id="siteFunctionality" class="siteCenter">
             <div id="options">
                 <ul>
                     <li class="pointer"><i class="far fa-bell icon bcsmallIcons"></i>Get Reminders
@@ -91,7 +92,7 @@
                 </ul>
             </div>
         </section>
-        <section class="getReminders">
+        <section class="getReminders siteCenter">
             <div id="verticalMenu">
                 <div id="smallLogo">
                     <h3>Relationz</h3>
@@ -121,7 +122,7 @@
                 <div id="searchTask">
                     <form action="">
                         <input type="text" placeholder="Find classes, task and anything...">
-                        <button class="btn pointer" id="taskBtn">New Tasks</button>
+                        <button class="btn blueBtn" id="taskBtn">New Tasks</button>
                     </form>
                     <div id="setting">
                         <div id="icons">
@@ -277,10 +278,10 @@
                 </div>
             </div>
         </section>
-        <div id="greenSvg">
+        <div class="groupSvg" class="siteCenter">
             <img src="./assets/images/Groupgreen.svg" alt="">
         </div>
-        <section id="reminders" class="f-column">
+        <section id="reminders" class="f-column optionsSection siteCenter">
             <div id="bellContainer">
                 <i class="icon bcbigIcon far fa-bell"></i>
             </div>
@@ -289,6 +290,13 @@
                     <div class="chat">
                         <img src="./assets/images/optionsProfiles/Image.svg" alt="">
                         You have a meeting with Surbhi to help her with her portfolio. She got a new pet (Dog named Tiger).
+                    </div>
+                    <div class="chatSvg">
+                        <svg height="100" width="100" >
+                            <circle class="whiteCirle" cx="55" cy="35" r="55" stroke="#F26A36" stroke-width="2" fill="#fff" />
+                            <circle class="whiteCirle" cx="55" cy="35" r="35" stroke="#F26A36" stroke-width="2" fill="#fff" />
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
                     </div>
                     <div class="chat">
                         <img src="./assets/images/optionsProfiles/Image (1).svg" alt="">
@@ -300,7 +308,7 @@
                     </div>
                 </div>
                 <div class="descriptionContent">
-                    <h3>Get reminders to follow up</h3>
+                    <h3 class="pTitles">Get reminders to follow up</h3>
                     <div class="descriptionText c-text">
                         We remind you of everything important and track everything that’s important to your important ones so you always stay connected. We only tell you the details when you need them the most.
                     </div>
@@ -317,13 +325,13 @@
                 </div>
             </div>
         </section>
-        <section id="sync">
+        <section id="sync" class="optionsSection siteCenter">
             <div id="synchronous">
                 <i class="icon bcbigIcon fas fa-sync"></i>
             </div>
             <div class="optionsContent">
                 <div class="descriptionContent">
-                    <h3>Our sync remembers everything</h3>
+                    <h3 class="pTitles">Our sync remembers everything</h3>
                     <div class="descriptionText c-text">
                         We build a huge databasse of all your contacts with all the possible details they share with you and you can access it anywhere, anytime. It’s works so well that you will love it like we do.
                     </div>
@@ -360,12 +368,19 @@
                 </div>
             </div>
         </section>
-        <section id="connection">
+        <section id="connection" class="optionsSection siteCenter">
             <div id="connectionContainer">
-                <img class="icon bcsmallIcons" src="./assets/images/Union.svg" alt="">
+                <img class="icon bcbigIcon" src="./assets/images/connectionBig.svg" alt="">
             </div>
             <div class="optionsContent">
                 <div class="chatContent">
+                    <div class="chatSvg connectSvg">
+                        <svg height="100" width="100" >
+                            <circle class="whiteCirle" cx="55" cy="35" r="55" stroke="#F26A36" stroke-width="2" fill="#fff" />
+                            <circle class="whiteCirle" cx="55" cy="35" r="35" stroke="#F26A36" stroke-width="2" fill="#fff" />
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
                     <div class="chat syncContainer connection">
                         <div id="profileData">
                             <div id="personalData">
@@ -386,8 +401,9 @@
                         </div>
                         <div id="sendEmail">
                             <div id="check">
-                                <input type="checkbox" name="send" checked>
-                                <label for="send">Send an Email as well</label>
+                                    <input type="checkbox" id="send" name="send" hidden>
+                                    <label for="send" class="checkmark"></label>
+                                    <span>Send an Email as well</span>
                             </div>
                             <div id="btnSend">
                                 Send
@@ -397,7 +413,7 @@
                     
                 </div>
                 <div class="descriptionContent">
-                    <h3>Stay connected in a few clicks</h3>
+                    <h3 class="pTitles">Stay connected in a few clicks</h3>
                     <div class="descriptionText c-text">
                         The multichannel sales engagement platform which automates personal email outreach, calls, and tasks, while Sales can focus on what really matters - closing
                     </div>
@@ -415,9 +431,180 @@
                 
             </div>
         </section>
+        <section id="customersOpinion">
+            <div id="opinionContainer">
+                <div class="svgProfiles">
+                    <div class="customerSvg">
+                        <img src="./assets/images/customersOpinions/Image.svg" alt="">
+                    </div>
+                    <div class="customerSvg">
+                        <svg viewBox="0 0 200 80">
+                            <circle class="whiteCirle" cx="100" cy="35" r="35" stroke="#F26A36" stroke-width="2" fill="#fff" />     
+                            <defs>
+                                <clipPath id="myCircle">
+                                    <circle class="whiteCirle" cx="100" cy="35" r="35" />  
+                                </clipPath>
+                            </defs>
+                                <Image width="200" height="80" xlink:href="http://localhost:8080/assets/images/customersOpinions/Image%20(1).svg" clip-path="url(#myCircle)"/>
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
+                    <div class="customerSvg thirdleftImage">
+                        <svg viewBox="68 0 180 80"> 
+                            <defs>
+                                <clipPath id="myCircle">
+                                    <circle class="whiteCirle" cx="100" cy="35" r="35" />  
+                                </clipPath>
+                            </defs>
+                                <Image width="200" height="80" xlink:href="http://localhost:8080/assets/images/customersOpinions/Image%20(5).svg" clip-path="url(#myCircle)"/>
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
+                </div>
+                <div id="opinion">
+                    <div id="titleSection">
+                        <h3 class="pTitles">What our customers are saying</h3>
+                    </div>
+                    <div id="containerOpinion">
+                        <div id="opinionProfile">
+                            <img src="./assets/images/customersOpinions/Rectangle.svg" alt="">
+                            <div id="customerName">
+                                Michelle Johnson, Australia
+                            </div>
+                            <div id="quote">
+                                <img src="./assets/images/quote.svg" alt="">
+                                <img src="./assets/images/quote.svg" alt="">
+                            </div>
+                            <div id="textOpinion" class="c-text">
+                                The multichannel sales engagement platform which automates personal email outreach, calls, and tasks, while Sales can focus on what really matters - closing while Sales can focus on what really matters - closing
+                            </div>
+                            <div id="signature">
+                                <img src="./assets/images/signature.svg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="svgProfiles">
+                    <div class="customerSvg">
+                        <svg viewBox="-80 0 200 80">
+                            <circle class="whiteCirle" cx="115" cy="35" r="22" stroke="#64CCE3" stroke-width="4" fill="#fff" />     
+                            <defs>
+                                <clipPath id="myCircle">
+                                    <circle class="whiteCirle" cx="100" cy="35" r="35" />  
+                                </clipPath>
+                            </defs>
+                                <Image width="200" height="80" xlink:href="http://localhost:8080/assets/images/customersOpinions/Image%20(3).svg" clip-path="url(#myCircle)"/>
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
+                    <div class="customerSvg" id="secondrightImage">
+                        <svg viewBox="0 0 200 80">
+                            <defs>
+                                <clipPath id="myCircle">
+                                    <circle class="whiteCirle" cx="100" cy="55" r="35" />  
+                                </clipPath>
+                            </defs>
+                                <Image width="200" height="80" xlink:href="http://localhost:8080/assets/images/customersOpinions/Image%20(2).svg" clip-path="url(#myCircle)"/>
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
+                    <div class="customerSvg" id="thirdrightImage">
+                        <svg viewBox="40 0 200 80">
+                            <defs>
+                                <clipPath id="myCircle">
+                                    <circle class="whiteCirle" cx="100" cy="55" r="35" />  
+                                </clipPath>
+                            </defs>
+                                <Image width="200" height="80" xlink:href="http://localhost:8080/assets/images/customersOpinions/Image%20(4).svg" clip-path="url(#myCircle)"/>
+                            Sorry, inline SVG isn't supported by your browser.
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="groupSvg siteCenter">
+                <img id="orangePoints" src="./assets/images/GroupOrange.svg" alt="">
+            </div>
+            <div class="slideMaster">
+                <div class="dot bcMaster"></div>
+                <div class="dot bcMaster"></div>
+                <div class="dash bcMaster"></div>
+                <div class="dot bcMaster"></div>
+                <div class="dot bcMaster"></div>
+            </div>
+        </section>  
+        <section id="betterRelationship" class="siteCenter">
+            <div id="blueCircle">
+                <svg height="150" width="100" >
+                    <circle class="whiteCirle" cx="35" cy="35" r="35" stroke="#fff" stroke-width="3" fill="#64CBE3" />
+                    <circle class="whiteCirle" cx="35" cy="35" r="20" stroke="#fff" stroke-width="5" fill="#fff" />
+                    Sorry, inline SVG isn't supported by your browser.
+                </svg>
+            </div>
+            <div id="container">
+                <div id="title">
+                    <h3 class="pTitles">Form better relationship with everyone</h3> 
+                    <span class="c-text">Start your free 14 days trial</span>
+                </div>
+                <div class="btn tryBtn greenBtn">
+                    Try it for free
+                </div>
+            </div>
+        </section>
    </main>
-   <footer>
-
+   <footer class="siteCenter">
+        <div id="footerContainer">
+            <div class="footerColumn">
+                <div class="titleColumn">
+                    Relationz
+                </div>
+                <ul class="c-text">
+                    <li>Product Tour</li>
+                    <li>Pricing</li>
+                    <li>Founding Members</li>
+                    <li>Case studies</li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <div class="titleColumn">
+                    Company
+                </div>
+                <ul class="c-text">
+                    <li>Blog</li>
+                    <li>Career</li>
+                    <li>Privacy</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <div class="titleColumn">
+                    Support
+                </div>
+                <ul class="c-text">
+                    <li>Documentation</li>
+                    <li>Security</li>
+                    <li>Mobily Guide</li>
+                    <li>FaQs</li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <div class="titleColumn">
+                    Legal
+                </div>
+                <ul class="c-text">
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Information</li>
+                    <li>GDPR Commitment</li>
+                </ul>
+            </div>
+        </div>
+        <div id="copyright">
+            <div class="titleColumn">
+                Relationz
+            </div>
+            <span class="c-text">Copyright © 2010 - 2019 Relationz Ltd. All rights reserved.</span>
+        </div>
    </footer>
 </body>
 </html>

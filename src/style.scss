@@ -485,14 +485,15 @@ body {
   }
       #infoMeetings {
         display:block;
+        padding:10px 30px;
         @include breakpoint("tablet") {
           display:flex;
           justify-content: space-around;
+          padding:0;
         }
         .infoBox{
           border-radius: $radius-btn;
-          padding:0 30px;
-          margin:25px 0;
+          
           background-color: map-get($background, bc-white );
           font-size: 14px;
           @include breakpoint("tablet") {
@@ -703,9 +704,8 @@ body {
              }
              }
         #btnSend {
-          background-color: map-get($background, bc-green-btn);
           padding:10px 20px;
-          color:#fff;
+          border:1px solid #000;
           border-radius:$radius-btn;
           cursor:pointer;
         }

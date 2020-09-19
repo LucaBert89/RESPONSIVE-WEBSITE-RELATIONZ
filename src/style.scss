@@ -489,11 +489,9 @@ body {
         @include breakpoint("tablet") {
           display:flex;
           justify-content: space-around;
-          padding:0;
+          padding:20px 0;
         }
         .infoBox{
-          border-radius: $radius-btn;
-          
           background-color: map-get($background, bc-white );
           font-size: 14px;
           @include breakpoint("tablet") {

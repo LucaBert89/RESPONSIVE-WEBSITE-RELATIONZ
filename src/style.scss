@@ -577,7 +577,7 @@ body {
 }
 
 #reminders, #sync,#connection {
-  margin-top:50px;
+  margin-top:30px;
     .bcbigIcon, .bcsmallIcons {
       background-color:map-get($background, bc-green-icons );
       padding:20px;
@@ -642,12 +642,17 @@ body {
           }
           #personalData {
             h3 {
+              font-size: map-get($font-size,font-md );
+              font-family:map-get($font-family, font-bold );
               margin:0;
             }
           }
           .infochatBox {
             span {
-              font-size: map-get($font-size, font-sm );
+              font-size: map-get($font-size, font-mobile );
+              @include breakpoint("tablet") {
+                font-size: map-get($font-size, font-sm );
+              }
             }
             ul {
               list-style:none;
@@ -753,7 +758,10 @@ body {
 
 #customersOpinion {
   #opinionContainer {
-    margin-top:100px;
+    margin-top:50px;
+    @include breakpoint("tablet") {
+      margin-top:100px;
+    }
     display:flex;
   }
   .svgProfiles {

@@ -31,15 +31,24 @@ body {
 
 
 // header section
+#headerMenu {
+  display:flex;
+  @include breakpoint("tablet") {
+    display:block;
+  }
+}
 #logo {
-  @include flex-center-vert ;
+  display:block;
+  @include breakpoint("tablet") {
+    @include flex-center-vert;
+  }
    h3 {
     margin:0;
     font-size:map-get($font-size, font-logo-dt);
     font-family:map-get($font-family, font-bold );
     line-height:49px;
     @include breakpoint("mobile") {
-      font-size:map-get($font-size, font-logo-dt);
+      font-size:map-get($font-size, font-logo-mobile);
     }
   }
 }
@@ -73,9 +82,9 @@ body {
       }
     } 
     #list {
-      margin-bottom:20px;
+      margin-bottom:35px;
       @include breakpoint("tablet") {
-        padding-bottom: 0px;
+        margin-bottom: 0px;
       }
       span {
         display:inline-block;
@@ -136,7 +145,7 @@ body {
 
 // presentation section and phoneimage section
 #presentationTitle {
-    margin-top:50px;
+    margin-top:70px;
     display: block;
   @include breakpoint("tablet") {
     margin-top:0px;
@@ -152,16 +161,22 @@ body {
   @include breakpoint("tablet") {
     width: map-get($width, width-md );
   }
-  #title h1 {
+  #title {
+    text-align:center;
+    @include breakpoint("tablet") {
+      text-align:left;
+    }
+  h1 {
     margin-bottom:20px;
     margin-left:10px;
     font-size:map-get($font-size, font-title-mobile );
     font-family: map-get($font-family , font-bold );
-    line-height: 22px;
+    line-height: 30px;
     @include breakpoint("tablet") {
       font-size:map-get($font-size, font-title-dt );
       line-height: 49px;
     }
+  }
   }
 };
 
@@ -278,11 +293,15 @@ body {
   ul{
     @include list-items;
     li {
+      text-align:center;
       position:relative;
       margin:0px 10px;
       border-bottom:3px solid map-get($background, bc-grey-icons );
       color:map-get($color, c-text ); 
       font-size:map-get($font-size, font-mobile);
+      @include breakpoint("tablet") {
+        text-align: left;
+      }
       &:hover:after {
         display:block;
         position:absolute;
@@ -298,14 +317,23 @@ body {
       }
       &:last-child {
         margin-right:0px;
-        @include flex-center-vert;
+        display: block;
+        @include breakpoint("tablet") {
+          @include flex-center-vert;
+        }
       }
       &:hover {
         color:#000;
       }
+      span{
+        display:block;
+        @include breakpoint("tablet") {
+          display:inline-block;
+        }
+        
+      }
       @include breakpoint("mobile") {
         font-size:map-get($font-size, font-sm);
-        
       }
       @include breakpoint("tablet") {
         font-size:map-get($font-size, font-md);
@@ -342,10 +370,11 @@ body {
 #verticalMenu {
     flex-direction: row;
     background-color:map-get($background, bc-white );
-    margin-left:30px;
+    margin-left:0px;
     border-right:$border-table;
     text-align:center;
   @include breakpoint("tablet") {
+    margin-left:30px;
     @include flex-column;
     width: 15%;
     text-align:left;

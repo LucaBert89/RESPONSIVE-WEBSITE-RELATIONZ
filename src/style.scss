@@ -35,7 +35,7 @@ body {
   @include flex-center-vert ;
    h3 {
     margin:0;
-    font-size:map-get($font-size, font-logo-mobile);
+    font-size:map-get($font-size, font-logo-dt);
     font-family:map-get($font-family, font-bold );
     line-height:49px;
     @include breakpoint("mobile") {
@@ -45,26 +45,41 @@ body {
 }
 
 .svgCircle {
-  position:relative;
-  margin-left:50px;
-  height:100px;
+  top:0;
+  position:absolute;
+  right:100px;
   width:10%;
   @include breakpoint("tablet") {
     margin-left:100px;
+    position:relative;
+    margin-left:50px;
+    height:100px;
 }}
 
 .menu {
-    display:flex;
-    justify-content: space-between;
+    display:block;
+    margin-top:20px;
+    @include breakpoint("tablet") {
+      margin-top: 0px;
+      display:flex;
+      justify-content: space-between;
+    }
     #menu-selection {
-      @include flex-center-vert;
+      display:block;
       font-size:map-get($font-size, font-sm);
       color: map-get($color, c-text);
+      @include breakpoint("tablet") {
+        @include flex-center-vert;
+      }
     } 
     #list {
+      margin-bottom:20px;
+      @include breakpoint("tablet") {
+        padding-bottom: 0px;
+      }
       span {
-        display:none;
-     
+        display:inline-block;
+        padding-right:20px;
         @include breakpoint("small-dp") {
           padding: 0px 10px;
           cursor: pointer;
@@ -121,8 +136,10 @@ body {
 
 // presentation section and phoneimage section
 #presentationTitle {
+    margin-top:50px;
     display: block;
   @include breakpoint("tablet") {
+    margin-top:0px;
     display:flex; 
     flex-wrap:wrap;
   }
@@ -469,9 +486,10 @@ body {
       #button {
         display:flex;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: center;
         @include breakpoint("tablet") {
           width:25%;
+          justify-content: flex-end;
         }
         #btnStart {
           background-color: #627FF4;

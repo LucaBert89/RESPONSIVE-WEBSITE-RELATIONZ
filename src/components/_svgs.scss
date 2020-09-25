@@ -1,0 +1,166 @@
+.groupSvg {
+    position:relative;
+    bottom:40px;
+    z-index:-1;
+    display:flex;
+    justify-content: flex-end;
+    img {
+      width:60px;
+      @include breakpoint("tablet") {
+       width:80px;
+        }
+    }
+    #orangePoints {
+      transform: translateX(-20px);
+    }
+  }
+
+// header svg
+
+.svgCircle {
+    top:0;
+    position:absolute;
+    right:100px;
+    width:10%;
+    @include breakpoint("tablet") {
+      margin-left:100px;
+      position:relative;
+      margin-left:50px;
+      height:100px;
+  }}
+
+
+  // presentation section
+  #imagePhone {
+    display:flex;
+    justify-content: center;
+    width: map-get($width, width-lg );
+    margin-top:0;
+    height:600px;
+    @include breakpoint("tablet") {
+      overflow:hidden;
+      width: map-get($width, width-md );
+      margin-top: 50px;
+      height:100%;
+      justify-content: flex-end;
+    }
+    #phone {
+      position:relative;
+    }
+    .phoneCircle {
+      position:relative;
+    }
+    .small {
+      top:70px;
+      left:10px;
+      z-index:-1;
+      img {
+        width: 50px;
+      }
+    }
+    .big {
+      width:100px;
+      bottom:90px;
+      left:200px;
+      z-index:-1;
+      img {
+        width:70px;
+      }
+    }
+  };  
+
+  .break {
+    display:none;
+    @include breakpoint("tablet") {
+      display:block;
+      position:relative;
+      left:0;
+      margin-left:-25%;
+      z-index:-1;
+    }
+  }
+
+  // reminder section
+  .connectSvg {
+    top:-10%;
+  }
+
+  .chatSvg {
+    position:relative;
+    right:10%;
+    bottom:20%;
+    img {
+      position:absolute;
+      z-index:-1;
+    }
+  }
+
+// sync section
+.syncCircle {
+  position:relative;
+  z-index:-1;
+  bottom:100px;
+  text-align:center;
+}
+
+//customer opinion section
+.svgProfiles {
+    position:relative;  
+    width:30%;
+    margin-top:50px;
+    flex-direction:column;
+    .customerSvg {
+      display:none;
+      position:absolute;
+      img {
+        position:relative;
+      }
+      #insideCircle {
+        position:absolute;
+        left:-5px;
+      } 
+    
+      @include breakpoint("small-dp") {
+        display:flex;
+      }
+      svg {
+        position:absolute;
+      }
+    }
+    .secondleftImage {
+      top:20%;
+      left:40%;
+    }
+    .thirdleftImage {
+      top:70%;
+    }
+    #greencircleAround {
+      width:30px;
+      left:58%;
+      margin-top:-10%;
+    }
+    #insidecircleImage {
+      width:40px;
+    }
+    #firstrightImage {
+      right:1px;
+    }
+    #secondrightImage {
+      left:40%;
+      top:20%;
+    }
+    #thirdrightImage {
+      left:20%;
+      top:70%;
+    }
+  }
+
+  // footer svg
+  #blueCircle {
+    position:relative;
+    right:20px;
+    top:50px;
+    @include breakpoint("tablet") {
+      right:40px;
+    }
+  }

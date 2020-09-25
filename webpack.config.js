@@ -6,7 +6,7 @@ module.exports = {
     mode:"production",
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "index.html")
+        template: path.resolve(__dirname, "src", "index.html")
       }),
       new MiniCssExtractPlugin({
         filename: "style.css"

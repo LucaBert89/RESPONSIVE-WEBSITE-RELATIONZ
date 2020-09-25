@@ -1,0 +1,106 @@
+.btn {
+    border-radius:$radius-btn;
+    color:map-get($color, c-white-btn );
+    cursor: pointer;
+  }
+
+//header buttons
+
+  .tryBtn {
+    width: 100px;
+    right:0;
+    font-size:map-get($font-size, font-mobile );
+    @include breakpoint("tablet") {
+      width: 150px;
+      font-size:map-get($font-size, font-sm );
+    }
+  }
+  
+  .headerBtn{
+    cursor: pointer;
+    span {
+      border-radius:$radius-btn;
+      padding: 10px 12px;
+      color: map-get($color, c-blue);
+      border: 2px solid map-get($color, c-blue);
+      font-weight: 600;
+      font-size:map-get($font-size, font-mobile);
+      @include breakpoint("tablet") {
+      padding: map-get($padding-btns, padding-sm);
+      }
+      @include breakpoint("mobile") {
+        font-size:map-get($font-size, font-sm);
+      }
+    }
+    & :hover {
+      color: map-get($color, c-white-btn);
+      background:map-get($background, bc-blue-btn);
+    }
+  };
+
+  // presentation
+
+  #emailTry {
+    .tryBtn {
+        height:100%;
+        position:absolute;
+      }
+  }
+
+  // relationz section
+
+  .logbtn {
+    background-color: map-get($background, bc-grey-icons);
+    display:inline;
+    padding:5px 10px;
+    cursor: pointer;
+    font-size: map-get($font-size, font-sm );
+    @include breakpoint("tablet") {
+      padding:10px 20px;
+    }
+  }
+
+  #button {
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include breakpoint("tablet") {
+      width:25%;
+      justify-content: flex-end;
+    }
+    #btnStart {
+      background-color: #627FF4;
+      display:inline;
+      padding: 10px 20px;
+      font-size:map-get($font-size, font-sm );
+      cursor: pointer;
+      z-index:1;
+    }
+  }
+
+  #relationz {
+    #taskBtn {
+        padding:10px 40px;
+        font-size:12px;
+      }
+  }  
+
+  // connected section button
+  #btnSend {
+    padding:10px 40px;
+    border-radius:$radius-btn;
+  }
+
+  //customer opinion section
+  #container {
+  .btn {
+    margin-top:20px;
+    @include flex-center-hori;
+    @include flex-center-vert;
+    border:1px solid #000;
+    height:50px;
+    @include breakpoint("tablet") {
+      margin-top:0px;
+    }
+    }
+  }

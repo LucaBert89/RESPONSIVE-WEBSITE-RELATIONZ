@@ -1,5 +1,5 @@
-@import './breakpoints.scss';
-@import './variable.scss';
+@import "../base/breakpoints";
+@import "../base/variables";
 
 .siteCenter {
     width:map-get($width, width-center );

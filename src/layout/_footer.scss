@@ -1,0 +1,49 @@
+//FOOTER SECTION
+
+#footerContainer {
+    display:flex;
+    margin-top:100px;
+    flex-wrap:wrap;
+    text-align:center;
+    .footerColumn {
+      width:50%;
+      @include breakpoint("tablet") {
+        width:25%;
+      }
+      ul {
+        list-style: none;
+        padding:0;
+        li {
+          font-size: map-get($font-size, font-mobile);
+          padding:5px 0;
+          margin:0;
+          @include breakpoint("tablet") {
+            font-size: map-get($font-size, font-sm );
+          }
+        }
+      }
+    }
+  }
+  
+  .titleColumn {
+    font-family: map-get($font-family, font-bold );
+    font-size: map-get($font-size, font-sm );
+    @include breakpoint("tablet") {
+      font-size: map-get($font-size, font-md );
+    }
+  }
+  
+  #copyright {
+    margin:50px 0;
+    text-align:center;
+    .titleColumn {
+      padding-bottom:20px;
+    
+    }
+    span {
+      font-size:map-get($font-size, font-mobile );
+      @include breakpoint("tablet") {
+        font-size:map-get($font-size, font-sm );
+      }
+    }
+  }

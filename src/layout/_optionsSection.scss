@@ -1,0 +1,169 @@
+//reminders / sync and connection section
+
+#reminders, #sync,#connection {
+    margin-top:30px;
+      .bcbigIcon, .bcsmallIcons {
+        background-color:map-get($background, bc-green-icons );
+        padding:20px;
+        font-size: map-get($font-size, font-logo-dt);
+        color: map-get($color, c-green-send)
+      }
+      .optionsContent {
+        display:block;
+        
+        @include breakpoint("tablet") {
+          display:flex;
+        }
+        .chatContent {
+          width:100%;
+          margin-top:40px;
+          margin-right:50px;
+          display:flex;
+          flex-direction: column;
+          
+          @include breakpoint("tablet") {
+            width:50%;
+          }
+          
+          .chat {
+            background: map-get($background, bc-white );
+            font-size: map-get($font-size, font-mobile );
+            display:flex; 
+            margin:10px 0;
+            padding:20px 60px;
+            filter:drop-shadow(0px 2.77222px 27.7222px rgba(0, 0, 0, 0.100));
+  
+            @include breakpoint("tablet") {
+              font-size: map-get($font-size, font-mdd );;
+            }
+            img {
+              padding-right:5px;
+            }
+          }
+          
+          .syncContainer {
+            flex-wrap:wrap;
+            padding:20px 30px;
+            border-radius:$radius-btn;
+            @include breakpoint("tablet") {
+              margin-left:50px;
+            }
+            #profileData {
+              display:flex;
+              align-items: start;
+              padding-bottom:20px;
+              img {
+                width: 50px;
+              }
+              }
+            }
+            #personalData {
+              h3 {
+                font-size: map-get($font-size,font-md );
+                font-family:map-get($font-family, font-bold );
+                margin:0;
+              }
+            }
+            .infochatBox {
+              span {
+                font-size: map-get($font-size, font-mobile );
+                @include breakpoint("tablet") {
+                  font-size: map-get($font-size, font-sm );
+                }
+              }
+              ul {
+                list-style:none;
+                padding:0;
+                i {
+                  padding-right:20px;
+                  margin:10px 0;
+                }
+              }
+            }
+            
+          }
+        }
+        .connection {
+          margin-left:0!important;
+          #messageChat {
+            font-size: map-get($font-size, font-sm );
+            margin:20px 0;
+          }
+          #sendEmail {
+            @include flex-center-vert;
+            justify-content: space-between;
+            width:100%;
+            #check {
+              @include flex-center-vert;
+            }
+            input:checked ~ .checkmark {
+              background-color: #fff;
+              &:after {
+                opacity:1;
+              }
+              }
+              .checkmark {
+                cursor:pointer;
+                margin-right:20px;
+                display:block;
+                width:20px;
+                height:20px;
+                border:1px solid map-get($background, bc-green-btn);
+                background-color: map-get($background, bc-grey-icons);
+                position:relative;
+                transition: background-color 0.4s;
+                &:after {
+                  content:"";
+                  position:absolute;
+                  width:5px;
+                  height:10px;
+                  border-right:2px solid map-get($background, bc-green-btn);
+                  border-bottom:2px solid map-get($background, bc-green-btn);
+                  top:40%;
+                  left:50%;
+                  transform:translate(-50%, -50%) rotateZ(40deg);
+                  opacity:0;
+                }
+              }
+                }
+               }
+               }
+          
+          .textRow {
+            display:flex;
+              li {
+                font-size: map-get($font-size, font-sm );
+                padding-right:20px;
+              }
+          }
+        .descriptionContent {
+          width:100%;
+          display:flex;
+          flex-direction:column;
+          @include breakpoint("tablet") {
+            width:50%;
+          }
+          .descriptionText {
+            font-size: map-get($font-size, font-sm );
+            line-height: 30px;
+            @include breakpoint("tablet") {
+              font-size: map-get($font-size, font-md );
+            }
+          }
+          .listOptions {
+            display:flex;
+            ul {
+              list-style: none;
+              padding:0;
+              margin-right:20px;
+              li {
+                font-size: map-get($font-size, font-sm );
+                margin:20px 10px;
+                i {
+                  padding-right:10px;
+                  color: map-get($color, c-green-send);
+                }
+              }
+            }
+          }
+        }

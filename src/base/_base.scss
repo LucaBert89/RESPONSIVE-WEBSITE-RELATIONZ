@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 1440px;
+    margin:auto;
+    font-size: map-get($font-size, font-md );
+    font-family: map-get($font-family, font-light );
+    font-weight: 600;
+  }

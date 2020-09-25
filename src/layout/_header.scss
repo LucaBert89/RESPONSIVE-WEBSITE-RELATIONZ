@@ -1,0 +1,65 @@
+// header section
+#headerMenu {
+    display:flex;
+    @include breakpoint("tablet") {
+      display:block;
+    }
+  }
+  #logo {
+    display:block;
+    @include breakpoint("tablet") {
+      @include flex-center-vert;
+    }
+     h3 {
+      margin:0;
+      font-size:map-get($font-size, font-logo-dt);
+      font-family:map-get($font-family, font-bold );
+      line-height:49px;
+      @include breakpoint("mobile") {
+        font-size:map-get($font-size, font-logo-mobile);
+      }
+    }
+  }
+  
+  
+  
+  .menu {
+      display:block;
+      margin-top:20px;
+      @include breakpoint("tablet") {
+        margin-top: 0px;
+        display:flex;
+        justify-content: space-between;
+      }
+      #menu-selection {
+        display:block;
+        font-size:map-get($font-size, font-sm);
+        color: map-get($color, c-text);
+        @include breakpoint("tablet") {
+          @include flex-center-vert;
+        }
+      } 
+      #list {
+        margin-bottom:35px;
+        @include breakpoint("tablet") {
+          margin-bottom: 0px;
+        }
+        span {
+          display:inline-block;
+          padding-right:20px;
+          @include breakpoint("small-dp") {
+            padding: 0px 10px;
+            cursor: pointer;
+            display:inline-flex;
+          }
+          @include breakpoint("desktop") {
+            padding: 0px 30px;
+          }
+      }
+      & :hover {
+        color: map-get($color, c-blue);
+      }
+      }
+  }
+  
+  

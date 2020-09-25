@@ -12,16 +12,14 @@
     }
      h3 {
       margin:0;
-      font-size:map-get($font-size, font-logo-dt);
+      font-size:map-get($font-size, font-logo-mobile);
       font-family:map-get($font-family, font-bold );
       line-height:49px;
-      @include breakpoint("mobile") {
-        font-size:map-get($font-size, font-logo-mobile);
+      @include breakpoint("tablet") {
+        font-size:map-get($font-size, font-logo-dt);
       }
     }
   }
-  
-  
   
   .menu {
       display:block;
@@ -34,7 +32,6 @@
       #menu-selection {
         display:block;
         font-size:map-get($font-size, font-sm);
-        color: map-get($color, c-text);
         @include breakpoint("tablet") {
           @include flex-center-vert;
         }
@@ -45,6 +42,9 @@
           margin-bottom: 0px;
         }
         span {
+          color: map-get($color, c-text);
+          font-family: map-get($font-family, font-semibold );
+          font-weight: 600;
           display:inline-block;
           padding-right:20px;
           @include breakpoint("small-dp") {

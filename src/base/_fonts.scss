@@ -13,3 +13,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+     font-family: 'gilroy-semibold';
+     src: url('./WebFonts/Gilroy-SemiBold.ttf') format('ttf'),
+          url('./WebFonts/Gilroy-SemiBold.ttf') format('woff');
+     font-weight: normal;
+     font-style: normal;
+  }

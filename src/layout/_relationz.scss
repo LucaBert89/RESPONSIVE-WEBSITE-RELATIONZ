@@ -140,7 +140,11 @@
        form {
          position:relative;
          input[type=text] {
-           padding-left:35px;
+            padding-left: 35px;
+            font-size: 11px;
+            @include breakpoint("tablet") {
+              font-size: map-get($font-size, font-sm );
+            }
          }
          i {
            font-size:15px;
@@ -194,6 +198,7 @@
      background-color: map-get($background, bc-grey-icons);
      border-bottom-right-radius: $radius-btn;
      #welcome {  
+       border-radius:$radius-btn;
        margin:15px 20px;
        background-color:map-get($background, bc-blue-btn );
        color:map-get($color, c-white-btn );

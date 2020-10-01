@@ -21,14 +21,26 @@ module.exports = {
                  "sass-loader"
               ],
             },
-            { test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            { test: /\.(woff|woff2|eot|ttf)$/,
               exclude: /node_modules/,
               loader: 'file-loader',
               options: {
                 name: "[name].[ext]",
                 outputPath: 'fonts/'
               } 
-            }
+            },
+            { test: /\.(png|svg|jpg|gif)$/,
+              use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: "[name].[ext]",
+                  outputPath: "images/",
+                  publicPath: "images/"
+                } 
+              }
+              ]
+            } 
           ]
         }, 
   

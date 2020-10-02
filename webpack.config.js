@@ -34,13 +34,30 @@ module.exports = {
               {
                 loader: 'file-loader',
                 options: {
+                  esModule: false,
                   name: "[name].[ext]",
                   outputPath: "images/",
                   publicPath: "images/"
                 } 
-              }
+              },
+            
               ]
-            } 
+            }, 
+            {
+              test: /\.html$/i,
+              loader: 'html-loader',
+              options: {
+                attributes: {
+                  list: [
+                    {
+                      tag: 'img',
+                      attribute: 'data-src',
+                      type: 'src',
+                    },
+                  ]
+                }
+              }
+            },
           ]
         }, 
   

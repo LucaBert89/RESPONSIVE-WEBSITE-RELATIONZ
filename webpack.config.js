@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const SocialTags = require("social-tags-webpack-plugin");
 
 module.exports = {
     mode:"production",
@@ -9,12 +10,13 @@ module.exports = {
         template: path.resolve(__dirname, "src", "index.html"),
         meta: [{
           property: "og:image",
-          content:"https://helpmyrelationz.netlify.app/src/images/website-preview.png",
+          content:"https://helpmyrelationz.netlify.app/dist/images/website-preview.png",
         }]
       }),
       new MiniCssExtractPlugin({
         filename: "style.css"
-      })],
+      })
+    ],
      module: {
           rules: [
             {

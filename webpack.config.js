@@ -10,7 +10,7 @@ module.exports = {
         template: path.resolve(__dirname, "src", "index.html"),
         meta: [{
           property: "og:image",
-          content:"https://helpmyrelationz.netlify.app/dist/images/website-preview.png",
+          content:"./dist/images/website-preview.png",
         }]
       }),
       new MiniCssExtractPlugin({

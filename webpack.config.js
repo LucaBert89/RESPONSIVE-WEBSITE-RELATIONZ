@@ -7,9 +7,10 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src", "index.html"),
-        meta: {
-          "og:image":"https://helpmyrelationz.netlify.app/images/website-preview.png",
-        }
+        meta: [{
+          property: "og:image",
+          content:"https://helpmyrelationz.netlify.app/images/website-preview.png",
+        }]
       }),
       new MiniCssExtractPlugin({
         filename: "style.css"
